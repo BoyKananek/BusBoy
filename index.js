@@ -26,7 +26,7 @@ app.post('/webhook', function (req, res) {
         var event = events[i];
         if (event.message && event.message.text) {
             sendMessage(event.sender.id, {text: "Echo: " + event.message.text});
-        }else if(event.message.text == "Hello"){
+        }else if(event.message && event.message.text == "Hello"){
             sendMessage(event.sender.id, {text:"Hi, How are you? "});
         }
     }
