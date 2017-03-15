@@ -40,7 +40,7 @@ function sendMessage(event) {
   let sender = event.sender.id;
   let text = event.message.text;
 
-  let apiai = apiaiApp.textRequest(text, {
+  let apiai = appapi.textRequest(text, {
     sessionId: 'tabby_cat' // use any arbitrary id
   });
 
